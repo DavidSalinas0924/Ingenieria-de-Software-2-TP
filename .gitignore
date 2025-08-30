@@ -14,6 +14,5 @@ __pycache__/
 
 # Logs y archivos temporales
 *.log
-=======
-venv/
+
 >>>>>>> 98d9ecb136acf8b89fa9e17b7b17e468f5131366
