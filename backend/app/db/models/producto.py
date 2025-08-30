@@ -1,15 +1,12 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship
-from app.db.base import Base  
+from sqlalchemy import Column, Integer, String, Float
+from app.db.base import Base
 
-
-class Producto(Base):
+class ProductoORM(Base):
     __tablename__ = "productos"
 
     id = Column(Integer, primary_key=True)
     nombre = Column(String, nullable=False)
-    sku = Column(String, unique=True, nullable=False)
-    stock = Column(Integer, default=0)
-    stock_minimo = Column(Integer, default=0)
-
-   # movimientos = relationship("Movimiento", back_populates="producto")
+    sku = Column(String, nullable=False)
+    stock = Column(Integer, nullable=False)
+    precio = Column(Float, nullable=False)
+    descripcion = Column(String, nullable=True)
